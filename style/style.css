@@ -13,12 +13,8 @@
 
 
 
-
-
-
-
 h1,h2,h3 {
-    font-family: 'Roboto Slab', serif; /* fuentes p/body y titulos */
+    font-family: 'Roboto Slab', serif; /* fuentes p/titulos */
 }
 
 a {
@@ -31,7 +27,7 @@ a {
  * {
     margin: 0;
     padding: 0;
-    /* NO ME SIRVE PIERDO TODOS LOS MARGENES Y PADDINGS !!! */
+    box-sizing: border-box;
 }  
 
 /* reset de img para que ocupen el 100% del contenedor */
@@ -44,7 +40,7 @@ img {
 /* estilos del HEADER */
 
 header {
-    /*position: sticky;*/ /* el sticky se pega a su elemento padre(el body)*/ 
+    position: sticky;  /* el sticky se pega a su elemento padre(el body)*/ 
     top: 0; /* se pega a la parte de arriba*/
     z-index: 1; /* queda por encima en el eje Z */
     font-family: 'Phudu', serif;
@@ -52,17 +48,15 @@ header {
     background-color: rgb(255, 255, 255);
     display: flex; /* se ponen los elementos uno al lado del otro */
     justify-content: space-evenly; /* las 2 cajas del nav se elinean horizontalmente */
-    align-items: center; /* los alinea en eje y */
+    align-items: baseline;
     flex-wrap: wrap;
-
-
 }
 
 header img {
     width: 150px;
 }
 
-nav ul {
+nav ul, .navbar-nav {
     display: flex; /* se ponen los elementos uno al lado del otro */
     align-items: center; /* alinea VERTICALMENTE el boton con texto */
     list-style-type: none;
@@ -84,12 +78,13 @@ nav ul {
     border-color: grey;
 }
 
-.list-item {
+
+.nav-item {
     border-bottom: 2px solid white;
     transition: all 0.2s ease;
 }
 
-.list-item:hover {
+.nav-item:hover {
     border-color: orange;
 }
 
@@ -97,7 +92,7 @@ nav ul {
 /* CARRUSEL */
 #carrusel {
     margin: 0 auto;
-    flex-wrap: wrap;
+    max-width: 1550px;
 }
 
 
@@ -105,7 +100,9 @@ nav ul {
 
 
 #section-qs {
-    margin-top: 30px;
+    margin: 0 auto;
+    margin-top: 50px;
+    max-width: 1550px;
 }
 
 .qs-article {
@@ -121,9 +118,13 @@ nav ul {
 
 #subrayado {
     width: 40px;
+    height: 3px;
     margin-top: 20px;
-    padding-top: 3px;
     background-color: orange;
+}
+
+.qs-titulo {
+    font-weight: 600;
 }
 
 .qs-texto {
@@ -162,6 +163,7 @@ nav ul {
 
 .ms-titulos {
     font-size: 20px;
+    font-weight: 600;
     margin-bottom: 10px;
 }
 
@@ -188,13 +190,15 @@ nav ul {
 
 /* QUE HACEMOS */
 #que-hacemos {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid black; 
+    margin: 0 auto;
+    max-width: 1550px;
 }
 
 .qh-principal {
     display: flex;
     align-items: center;
-    /* flex-wrap: wrap; se modifica en version desktop */
+    /*flex-wrap: wrap; /*se modifica en version desktop */
     border-top:1px solid black;
     border-bottom:1px solid black;
     background-color: rgb(235, 191, 108);
@@ -206,6 +210,10 @@ nav ul {
 
 .qh-div-texto {
     margin: 40px;
+}
+
+.qh-titulo {
+    font-weight: 600;
 }
 
 .espaciado {
@@ -229,6 +237,11 @@ nav ul {
 }
 
 /* NOVEDADES */ 
+#novedades {
+    margin: 0 auto;
+    max-width: 1550px;
+}
+
 #novedades img {
     width: 529px;
 }
@@ -244,13 +257,13 @@ nav ul {
 
 .n-titulo {
     font-size: large;
-    margin-top: 30px;
+    margin-top: 40px;
+    margin-left: 60px;
+    font-family: 'Roboto slab', serif;
 }
 
 .n-titulos {   
-    font-family: 'Roboto slab';
-    margin: 10px 0px;
-    margin-left: 60px;
+   font-weight: 600;
 }
 
 .proyectos-alinear {
@@ -270,6 +283,7 @@ nav ul {
     margin-bottom: 50px;
     text-align: center;
     font-size: 30px;
+    font-weight: 600;
 }
 
 .cajas-container{
@@ -323,14 +337,23 @@ nav ul {
    text-align: center;
    margin: 20px auto;
    font-size: 20px;
+   font-weight: 600;
 }
 
 .subtitulo-dos {
-    margin: 20px auto;
+    margin: 15px auto;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.datos-bancarios {
+    font-size: 16px;
+    font-weight: 600;
 }
 
 #donaciones {
-    margin: 50px 0;
+    max-width: 1550px;
+    margin: 50px auto;
     border-bottom: 1px solid black;
 }
 
@@ -338,7 +361,8 @@ nav ul {
 #contacto{
     display: flex;
     justify-content: space-evenly;
-    margin: 40px;
+    margin: 40px auto;
+    max-width: 1550px;
     flex-wrap: wrap;
 }
 
@@ -349,20 +373,24 @@ nav ul {
 }
 
 .caja-contacto  {
-    width: 350px;
-    height: 470px;
     background-color: rgb(204, 204, 204);
-    padding: 30px;
+    width: 400px;
+    padding: 20px;
     border-radius: 10px;
+    border: 1px solid rgb(137, 137, 137);
 }
 
-.caja-contacto h2 {
-    margin-bottom: 10px;
+.contacto-titulo {
+    font-weight: 600;
 }
 
 .labels {
     font-family: 'Inter', serif;
     font-weight: 500; 
+}
+
+#label-achicar {
+    font-size: 15px;
 }
 
 .imputs-estilo {
@@ -373,6 +401,7 @@ nav ul {
 
 .imput-textarea {
     border-radius: 10px;
+    width: 300px;
 }
 
 .imput-enviar {
@@ -380,19 +409,13 @@ nav ul {
     font-size: 15px;
     font-weight: 500;
     padding: 5px;
-    
 }
 
 .imput-orange {
     accent-color: orange;
 }
 
-.redes-titulo{
-    margin-top: 0;
-    margin-bottom: 10px;
-}
-
-.telefono {
+.redes-titulo-telefono {
     font-family: 'Inter';
 }
 
@@ -404,6 +427,12 @@ nav ul {
     display: flex;
     gap: 10px;
     list-style-type: none;
+    padding: 0;
+}
+
+.redes-titulo {
+    font-weight: 600;
+    font-size: 30px;
 }
 
 /* estilos del FOOTER */
@@ -438,26 +467,108 @@ footer img {
     width: 150px;
 }
 
-@media only screen and (max-width: 768px){
+
+/* pantalla mas grande */
+/* @media only screen and (max-width: 992px){
     header {
-        padding: 20px;
+        background-color: rgb(232, 209, 253);
+    }
+} */
+
+/* tablet */
+/* @media only screen and (max-width: 768px){
+    header {
+        background-color: rgb(191, 122, 255);
+    }
+} */
+
+/* fono */
+@media only screen and (max-width: 576px){
+    header img {
+        width: 90px;        
+    }
+
+    .qs-articulo {
+        margin: 50px 30px 0 30px;
+    }
+
+    .que-hacemos {
+        flex-wrap: wrap;
+    }
+
+    .qh-principal {
+        flex-wrap: wrap;
+    }
+
+    .imagen-rota {
+        display: none;
+    }
+
+    .parrafo-inferior {
+       display: none;
+    }
+
+    .proyectos-alinear {
+       display: none; /*las imagenes me rompian la pagina*/
+    }
+
+    .novedades-parrafo {
+        text-align: center;
+    }
+
+    .valores {
+        flex-wrap: wrap;
+    }
+
+    .mision-vision {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .div-mision {
+        width: 100%;
+        border-right: none;
+
+    }
+    .div-vision {
+        width: 100%;
+        border-left: none;
+    }
+
+    .caja {
+        margin-top: 20px;
+    }
+
+    .div-medio {
+        text-align: center;
+        
+    }
+
+    .segunda-caja {
+        margin-top: 20px;
+    }
+
+    .footer-copy {
+        display: none;
     }
 }
 
 
 
+
+
+
+/* RESPONSIVE con grid y mediaqueris*/
+/* agregué header nav responsive y maxwidth a todas las secciones*/
+
+/* display none y display block */
+
 /* añadir iconos fontawsome*/
 
-/* agregar bootstrap */
+/*agregar position relative para las ubicaciones de los links header*/
 
-/* buscar menú hamburquesa de yt */
 
-/* agregar medias queris */
-
-/* agregar anchos maximos a etiquetas padres 
-max-width:1500px no se espande mas de 1500px
-??? no entendí bien // clase 3 01:35
-*/
 
 
 
