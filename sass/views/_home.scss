@@ -1,0 +1,445 @@
+// QUIENES SOMOS
+#quienes-somos {
+    margin: 0 auto;
+    margin-top: 50px;
+    max-width: $max-width;
+
+    .arriba {
+        @include flex(space-evenly, null, null, wrap);
+        flex-basis: auto;
+
+        .arriba-parrafo {
+            width: 700px;
+
+            .arriba-parrafo-titulo {
+                font-weight: $font-grosa;
+            }
+
+            #parrafo-subrayado {
+                width: 40px;
+                height: 3px;
+                margin-top: 20px;
+                background-color: $color-principal;
+            }
+
+            .arriba-parrafo-texto {
+                margin: 30px auto;
+                font-family: $font-texto ;
+                font-weight: $font-grosa;
+            }
+        }
+    }
+
+    .quienes-somos-medio {
+        @include flex(center, null, null, wrap);
+
+        .mision {
+            width: 40%;
+            border-right: 1px solid black;
+            padding: 20px;
+            padding-top: 0px;
+            text-align: center;
+        }
+
+        .vision {
+            @extend .mision;
+            border-right: none;
+            border-left: 1px solid black;
+
+        }
+
+        .qs-titulos {
+            font-weight: $font-grosa;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .qs-parrafo {
+            font-family: $font-texto;
+            font-weight: $font-grosa;
+        }
+    }
+
+    .qs-bajo {
+        @include flex(space-evenly,null, null, null);
+        text-align: center;
+        margin: 80px;
+        margin-bottom: 120px;
+
+        .valores-img {
+            width: 200px;
+        }
+
+        .valores-parrafo {
+            font-family: $font-texto;
+            font-weight: $font-grosa;
+            font-size: 14px;
+        }
+    }
+}
+
+// QUE HACEMOS
+#que-hacemos {
+    background-color: $color-secondary;
+    max-width: $max-width;
+    @include flex(null, center, null, null);
+    margin: 0 auto;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+
+    .qh-bloque {
+        margin: 30px;
+
+        .bloque-titulo {
+            font-weight: $font-grosa;
+        }
+
+        .bloque-lista {
+            font-family: $font-texto;
+            font-weight: $font-grosa ;
+            @include flex(null,null, 20px, null);
+            flex-direction: column;
+            font-size: 14px;
+            margin-top: 30px;
+        }
+    }
+
+    img {
+        width: 800px;
+    }
+}
+
+#parrafo-inferior {
+    max-width: $max-width;
+    font-family: $font-texto;
+    font-weight: $font-grosa;
+    margin: 0 auto;
+    text-align: center;
+    padding: 50px 120px;
+    word-spacing: 3px;
+    font-size: 15px;
+    border-bottom: 1px solid black;
+}
+
+//NOVEDADES
+#novedades {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding-bottom: 120px;
+    border-bottom: 1px solid black;
+
+    video {
+        width: 529px;
+    }
+
+    img {
+        width: 529px;
+    }
+
+    .novedades-titulo {
+        font-family: $font-tertiary;
+        font-size: large;
+        margin-top: 40px;
+        margin-left: 60px;
+
+        &-texto {
+            font-weight: $font-grosa;
+        }
+    }
+
+    .novedades-proyectos {
+        @include flex(null, center, 80px, null);
+        margin: 30px 60px;
+
+        .proyectos-parrafo {
+            font-family: $font-texto;
+            font-weight: $font-grosa;
+        }
+    }
+}
+
+// DONACIONES
+#donaciones {
+    max-width: $max-width;
+    margin: 50px auto;
+    border-bottom: 1px solid black;
+
+    .donaciones-titulo {
+        font-weight: $font-grosa;
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .donaciones-cards {
+        @include flex(space-evenly,null, null, wrap);
+        text-align: center;
+
+        .cards-caja {
+            width: 315px;
+            height: 200px;
+            border: 2px solid rgb(133, 133, 133);
+
+            .fondo{
+                font-family: $font-title;
+                background-color: $color-tertiary;
+                font-size: 20px;
+                padding: 40px 75px 30px 75px;
+                margin-top: 0;
+            }
+
+            .boton-donar {
+                background-color: $color-principal;
+                font-family: $font-title;
+                padding: 10px;
+                font-weight: 500; color:$menu-color;
+                display: block;
+                margin: 30px 70px;
+                border: 3px solid rgb(255, 140, 0);
+                border-radius:5px;
+                transition: all 0.2s ease;
+            }
+
+            &:hover{
+                border-color: grey; 
+            }
+        }
+    }
+
+    .donaciones-info {
+        display: flex;
+
+        .info-texto {
+            margin: 50px auto;
+            font-family: $font-tertiary ;
+
+            .info-texto-subtitulo {
+                font-weight: $font-grosa;
+                text-align: center;
+                margin: 20px auto;
+                font-size: 20px;
+            }
+            .subtitulo-dos {
+                margin: 15px auto;
+                font-weight: $font-grosa;
+                font-size: 18px;
+            }
+
+            .datos-bancarios {
+                font-weight: $font-grosa;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+// CONTACTO
+#contacto {
+    max-width: $max-width;
+    @include flex(space-evenly,null,null,wrap);
+    flex-direction: column;
+    margin: 40px auto;
+
+    img {
+        width: 40px;
+    }
+
+    .caja-contacto  {
+        background-color: rgb(204, 204, 204);
+        width: 400px;
+        padding: 20px;
+        border-radius: 10px;
+        border: 1px solid rgb(137, 137, 137);
+
+        .contacto-titulo {
+            font-weight: $font-grosa;
+        }
+
+        .imputs-estilo {
+            height: 25px;
+            border: 1px solid rgb(164, 164, 164);
+            border-radius: 5px;
+        }
+
+        .imput-textarea {
+            border-radius: 10px;
+            width: 300px;
+        }
+        
+        .imput-enviar {
+            font-family: $font-texto;
+            font-size: 15px;
+            font-weight: 500;
+            padding: 5px;
+        }
+        
+        .imput-orange {
+            accent-color: $color-principal;
+        }        
+
+        .labels {
+            font-family: $font-texto;
+            font-weight: 500;
+        }
+
+        #label-achicar {
+            font-size: 15px;
+        }
+    }
+
+    .segunda-caja {
+        @include flex(space-evenly,null,null,null);
+        flex-direction: column;
+
+        .redes-titulo {
+            font-weight: $font-grosa;
+            font-size: 30px;
+        }
+
+        .logos-redes {
+            @include flex(null,null,10px, null);
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .redes-links {
+            border-bottom: 2px solid white;
+            transition: all 0.2s ease;
+        }
+
+        &:hover {
+            border-color: $color-principal;
+        }
+
+        .redes-titulo-telefono {
+            font-family: $font-texto;
+        }
+    }
+}
+
+/* pantalla mas grande */
+/* @media only screen and (max-width: 992px){
+    header {
+        background-color: rgb(232, 209, 253);
+    }
+} */
+
+/* tablet */
+/* @media only screen and (max-width: 768px){
+    header {
+        background-color: rgb(191, 122, 255);
+    }
+} */
+
+/* fono */
+@media only screen and (min-width:320px) and (max-width: 576px){
+   
+    /* HEADER */
+    header img {
+        width: 90px;
+    }
+
+    /* QUIENES SOMOS */
+    .arriba iframe {
+        padding: 0 30px;
+    }
+
+    .arriba-parrafo {
+        margin: 50px 30px 0 30px;
+    }
+
+    .quienes-somos-medio {
+        @include flex(null, center, null, null);
+        flex-direction: column;
+        margin-top: 30px;
+
+        .mision, .vision {
+            width: 100%;
+            border-right: none;
+        }
+    }
+
+    .qs-bajo {
+        flex-wrap: wrap;
+        margin: 20px;
+
+        .valores-img {
+            width: 30%;
+        }
+    }
+
+    
+    /* QUE HACEMOS */
+    #que-hacemos {
+        flex-wrap: wrap;
+
+        img {
+            width: 100%;
+        }
+
+        .qh-bloque {
+            flex-wrap: wrap;
+        }
+    }
+
+    #parrafo-inferior {
+        padding: 20px;
+        padding-bottom: 5px;
+        text-align: justify;
+    }
+
+    /* NOVEDADES */
+    #novedades {
+        padding-bottom: 30px;
+
+        img, video {
+            width: 100%;
+        }
+
+        .novedades-proyectos {
+            margin: 30px auto;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            .proyectos-parrafo {
+                text-align: justify;
+                padding: 20px;
+            }
+        }
+
+    }
+
+    /* DONACIONES */
+    .cards-caja {
+        margin-top: 20px;
+    }
+
+    .info-texto {
+        text-align: center;
+    }
+
+    /* CONTACTO */
+    .segunda-caja {
+        margin-top: 20px;
+    }
+
+    /* FOOTER */
+    footer {
+        flex-wrap: wrap;
+
+        img {
+            width: 110px;
+        }
+
+        span {
+            background-color: rgb(204, 204, 204);
+            text-align: center;
+            order: 1;
+            font-size: 13px;
+        }
+
+        ul {
+            display: none;
+        }
+    }    
+}

@@ -1,0 +1,43 @@
+header {
+    position: sticky;  
+    top: 0; 
+    z-index: 1; 
+    font-family: $font-title;
+    border-bottom: 2px solid rgb(181, 181, 181);
+    background-color: $menu-color;
+    @include flex(space-evenly, baseline, null, wrap) ;
+
+    img {
+        width: 150px;
+    }
+
+    .navbar-nav { //ul
+        @include flex(space-evenly, center, 40px, wrap) ;
+        list-style-type: none;
+
+        .nav-item{ //li
+            border-bottom: 2px solid white;
+            transition: all 0.2s ease;
+
+            &:hover {
+                border-color: $color-principal;
+            }
+
+            #boton { //boton diferenciado
+                background-color: $color-principal;
+                color: $menu-color;
+                font-weight: 500; 
+                padding: 15px 20px;
+                border-radius:5px;
+                border: 3px solid $color-principal;
+                transition: all 0.2s ease;
+    
+                &:hover {
+                    border-color: grey;
+                }
+            }
+        }
+    }
+
+    
+}

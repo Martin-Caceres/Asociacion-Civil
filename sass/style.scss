@@ -1,0 +1,15 @@
+// imports utilities | IMPORTANTE uqe sea en este orden 
+@import "./utilities/maps" ;
+@import "./utilities/mixins";
+@import "./utilities/var" ;
+
+// imports globals
+@import "./global/resets" ;
+
+//vimports components
+@import "./components/navigation" ;
+@import "./components/carrusel" ;
+@import "./components/footer" ;
+
+// imports views 
+@import "./views/home"
