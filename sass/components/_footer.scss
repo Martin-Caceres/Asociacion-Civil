@@ -13,8 +13,7 @@ footer {
     }
 
     ul {
-        @include flex (center, null, 20px, null);
-        display: inline-block;
+        @include flex(center, null, 20px, null);
         list-style-type: none;
         margin: 40px;
         padding-left: 0;

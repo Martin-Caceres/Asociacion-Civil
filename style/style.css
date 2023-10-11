@@ -99,7 +99,6 @@ footer ul {
   display: flex;
   justify-content: center;
   gap: 20px;
-  display: inline-block;
   list-style-type: none;
   margin: 40px;
   padding-left: 0;
@@ -146,7 +145,7 @@ footer ul li:hover {
   justify-content: center;
   flex-wrap: wrap;
 }
-#quienes-somos .quienes-somos-medio .mision, #quienes-somos .quienes-somos-medio .vision {
+#quienes-somos .quienes-somos-medio .mision {
   width: 40%;
   border-right: 1px solid black;
   padding: 20px;
@@ -154,8 +153,11 @@ footer ul li:hover {
   text-align: center;
 }
 #quienes-somos .quienes-somos-medio .vision {
-  border-right: none;
+  width: 40%;
   border-left: 1px solid black;
+  padding: 20px;
+  padding-top: 0px;
+  text-align: center;
 }
 #quienes-somos .quienes-somos-medio .qs-titulos {
   font-weight: 600;
@@ -291,11 +293,11 @@ footer ul li:hover {
   color: rgb(255, 255, 255);
   display: block;
   margin: 30px 70px;
-  border: 3px solid rgb(255, 140, 0);
+  border: 3px solid orange;
   border-radius: 5px;
   transition: all 0.2s ease;
 }
-#donaciones .donaciones-cards .cards-caja:hover {
+#donaciones .donaciones-cards .cards-caja .boton-donar:hover {
   border-color: grey;
 }
 #donaciones .donaciones-info {
@@ -326,7 +328,6 @@ footer ul li:hover {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  flex-direction: column;
   margin: 40px auto;
 }
 #contacto img {
@@ -386,7 +387,7 @@ footer ul li:hover {
   border-bottom: 2px solid white;
   transition: all 0.2s ease;
 }
-#contacto .segunda-caja:hover {
+#contacto .segunda-caja .redes-links:hover {
   border-color: orange;
 }
 #contacto .segunda-caja .redes-titulo-telefono {
@@ -424,9 +425,13 @@ footer ul li:hover {
     flex-direction: column;
     margin-top: 30px;
   }
-  .quienes-somos-medio .mision, #quienes-somos .quienes-somos-medio .vision, .quienes-somos-medio .vision {
+  .quienes-somos-medio .mision {
     width: 100%;
     border-right: none;
+  }
+  .quienes-somos-medio .vision {
+    width: 100%;
+    border-left: none;
   }
   .qs-bajo {
     flex-wrap: wrap;
@@ -495,4 +500,4 @@ footer ul li:hover {
   }
 }
 
-/*# sourceMappingURL=nuevo-style.css.map */
+/*# sourceMappingURL=style.css.map */
