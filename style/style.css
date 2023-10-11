@@ -1,488 +1,398 @@
 /* GENERALES */
-
 /* fonts */
-@import url('https://fonts.googleapis.com/css2?family=Phudu:wght@300;400;500&display=swap'); /* phudu */
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap'); /* roboto slab */
-
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap'); /* lato */
-
-@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap'); /* merriweather */
-
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap'); /* inter */
-
-
-
-h1,h2,h3 {
-    font-family: 'Roboto Slab', serif; /* fuentes p/titulos */
+@import url("https://fonts.googleapis.com/css2?family=Phudu:wght@300;400;500&display=swap"); /* phudu */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap"); /* roboto slab */
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap"); /* lato */
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap"); /* merriweather */
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap"); /* inter */
+/* fuentes p/titulos */
+h1, h2, h3 {
+  font-family: "Roboto Slab", serif;
 }
 
+/*color negro y chau subrayado para los links*/
 a {
-    text-decoration: none;
-    color: black;
-    /*color negro y chau subrayado para los links*/
+  text-decoration: none;
+  color: black;
 }
 
- /* reset global sacamos el margin y padding que trae por defecto el navegador */
- * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* sacamos el margin y padding que trae por defecto el navegador */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 *::selection {
-    background-color: orange;
-    color: white;
+  background-color: orange;
+  color: white;
 }
 
 /* reset de img para que ocupen el 100% del contenedor */
 img {
-    width: 100%;
+  width: 100%;
 }
-
-
-
-/* estilos del HEADER */
 
 header {
-    position: sticky;  /* el sticky se pega a su elemento padre(el body)*/
-    top: 0; /* se pega a la parte de arriba*/
-    z-index: 1; /* queda por encima en el eje Z */
-    font-family: 'Phudu', serif;
-    border-bottom: 2px solid rgb(181, 181, 181);
-    background-color: rgb(255, 255, 255);
-    display: flex; /* se ponen los elementos uno al lado del otro */
-    justify-content: space-evenly; /* las 2 cajas del nav se elinean horizontalmente */
-    align-items: baseline;
-    flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  font-family: "phudu", serif;
+  border-bottom: 2px solid rgb(181, 181, 181);
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+  flex-wrap: wrap;
 }
-
 header img {
-    width: 150px;
+  width: 150px;
+}
+header .navbar-nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+header .navbar-nav .nav-item {
+  border-bottom: 2px solid white;
+  transition: all 0.2s ease;
+}
+header .navbar-nav .nav-item:hover {
+  border-color: orange;
+}
+header .navbar-nav .nav-item #boton {
+  background-color: orange;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  padding: 15px 20px;
+  border-radius: 5px;
+  border: 3px solid orange;
+  transition: all 0.2s ease;
+}
+header .navbar-nav .nav-item #boton:hover {
+  border-color: grey;
 }
 
-.navbar-nav {
-    display: flex; /* se ponen los elementos uno al lado del otro */
-    align-items: center; /* alinea VERTICALMENTE el boton con texto */
-    list-style-type: none;
-    gap: 40px; /* espacio entre elementos del ul */
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-
-#boton {
-    background-color: orange;
-    font-weight: 500; 
-    color: aliceblue;
-    padding: 15px 20px;
-    border-radius:5px;
-    border: 3px solid orange;
-    transition: all 0.2s ease;
-}
-
-#boton:hover {
-    border-color: grey;
-}
-
-
-.nav-item {
-    border-bottom: 2px solid white;
-    transition: all 0.2s ease;
-}
-
-.nav-item:hover {
-    border-color: orange;
-}
-
-
-/* CARRUSEL */
 #carrusel {
-    margin: 0 auto;
-    max-width: 1550px;
+  margin: 0 auto;
+  max-width: 1550px;
 }
 
-
-/* QUIENES SOMOS */ /* apliqué grid al quienes somos prefiero flex */
-
+footer {
+  background-color: orange;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-top: 1px solid gray;
+}
+footer img {
+  width: 150px;
+}
+footer span {
+  font-family: "Inter", serif;
+  padding: 0;
+}
+footer ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style-type: none;
+  margin: 40px;
+  padding-left: 0;
+}
+footer ul li {
+  font-family: "phudu", serif;
+  border-bottom: 2px solid rgb(255, 255, 255);
+  transition: all 0.2s ease;
+}
+footer ul li:hover {
+  border-color: orange;
+}
 
 #quienes-somos {
-    margin: 0 auto;
-    margin-top: 50px;
-    max-width: 1550px;
+  margin: 0 auto;
+  margin-top: 50px;
+  max-width: 1550px;
+}
+#quienes-somos .arriba {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  flex-basis: auto;
+}
+#quienes-somos .arriba .arriba-parrafo {
+  width: 700px;
+}
+#quienes-somos .arriba .arriba-parrafo .arriba-parrafo-titulo {
+  font-weight: 600;
+}
+#quienes-somos .arriba .arriba-parrafo #parrafo-subrayado {
+  width: 40px;
+  height: 3px;
+  margin-top: 20px;
+  background-color: orange;
+}
+#quienes-somos .arriba .arriba-parrafo .arriba-parrafo-texto {
+  margin: 30px auto;
+  font-family: "Inter", serif;
+  font-weight: 600;
+}
+#quienes-somos .quienes-somos-medio {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#quienes-somos .quienes-somos-medio .mision {
+  width: 40%;
+  border-right: 1px solid black;
+  padding: 20px;
+  padding-top: 0px;
+  text-align: center;
+}
+#quienes-somos .quienes-somos-medio .vision {
+  width: 40%;
+  border-left: 1px solid black;
+  padding: 20px;
+  padding-top: 0px;
+  text-align: center;
+}
+#quienes-somos .quienes-somos-medio .qs-titulos {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+#quienes-somos .quienes-somos-medio .qs-parrafo {
+  font-family: "Inter", serif;
+  font-weight: 600;
+}
+#quienes-somos .qs-bajo {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  margin: 80px;
+  margin-bottom: 120px;
+}
+#quienes-somos .qs-bajo .valores-img {
+  width: 200px;
+}
+#quienes-somos .qs-bajo .valores-parrafo {
+  font-family: "Inter", serif;
+  font-weight: 600;
+  font-size: 14px;
 }
 
-.arriba {
-    display: flex; /* se ponen los elementos uno al lado del otro */
-    justify-content: space-evenly; /* los elemntos se elinean en el eje */
-    flex-wrap: wrap; /* este wrap va bien */
-    flex-basis: auto;
-}
-
-.arriba-parrafo {
-    width: 700px;
-}
-
-#parrafo-subrayado {
-    width: 40px;
-    height: 3px;
-    margin-top: 20px;
-    background-color: orange;
-}
-
-.arriba-parrafo-titulo {
-    font-weight: 600;
-}
-
-.arriba-parrafo-texto {
-    margin: 30px auto;
-    font-family: 'Inter', serif ;
-    font-weight: 600;
-}
-
-.quienes-somos-medio {
-    display: flex;
-    justify-content: center;
-    margin-top: 100px;
-    flex-wrap: wrap;
-}
-
-.mision {
-    width: 40%;
-    border-right: 1px solid black;
-    padding: 20px;
-    padding-top: 0px;
-    text-align: center;
-}
-
-.vision {
-    width: 40%;
-    border-left: 1px solid black;
-    padding: 20px;
-    padding-top: 0px;
-    text-align: center;
-}
-
-.qs-titulos {
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-.qs-parrafo {
-    font-family: 'Inter', serif ;
-    font-weight: 600;
-}
-
-.qs-bajo {
-    display: flex;
-    justify-content: space-evenly;
-    /* flex-wrap: wrap; se modifica en version desktop ??? */
-    text-align: center;
-    margin: 80px;
-    margin-bottom: 120px;
-
-}
-
-.valores-img {
-    width: 200px;
-}
-
-.valores-parrafo {
-    font-family: 'Inter', serif;
-    font-weight: 600;
-    font-size: 14px;
-}
-
-/* QUE HACEMOS */
 #que-hacemos {
-    background-color: rgb(235, 191, 108);
-    max-width: 1550px;
-    margin: 0 auto;
-    border-top:1px solid black;
-    border-bottom:1px solid black;
-    display: flex;
-    align-items: center;
-  
+  background-color: rgb(235, 191, 108);
+  max-width: 1550px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
-
-.qh-bloque {
-    margin: 30px ;
+#que-hacemos .qh-bloque {
+  margin: 30px;
 }
-
-.bloque-titulo {
-    font-weight: 600;
+#que-hacemos .qh-bloque .bloque-titulo {
+  font-weight: 600;
 }
-
-.bloque-lista {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin-top: 30px;
-    font-family: 'Inter', serif;
-    font-weight: 600;
-    font-size: 14px;
+#que-hacemos .qh-bloque .bloque-lista {
+  font-family: "Inter", serif;
+  font-weight: 600;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  font-size: 14px;
+  margin-top: 30px;
 }
-
 #que-hacemos img {
-    width: 800px;
+  width: 800px;
 }
 
 #parrafo-inferior {
-    max-width: 1550px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 50px 120px;
-    word-spacing: 3px;
-    font-family: 'Inter',serif; 
-    font-weight: 600;
-    font-size: 15px;
-    border-bottom: 1px solid black;
+  max-width: 1550px;
+  font-family: "Inter", serif;
+  font-weight: 600;
+  margin: 0 auto;
+  text-align: center;
+  padding: 50px 120px;
+  word-spacing: 3px;
+  font-size: 15px;
+  border-bottom: 1px solid black;
 }
 
-/* NOVEDADES */
 #novedades {
-    margin: 0 auto;
-    max-width: 1550px;
-    padding-bottom: 120px;
-    border-bottom: 1px solid black;
+  max-width: 1550px;
+  margin: 0 auto;
+  padding-bottom: 120px;
+  border-bottom: 1px solid black;
 }
-
-#novedades img {
-    width: 529px;
-}
-
 #novedades video {
-    width: 529px;
+  width: 529px;
+}
+#novedades img {
+  width: 529px;
+}
+#novedades .novedades-titulo {
+  font-family: "roboto slab", serif;
+  font-size: large;
+  margin-top: 40px;
+  margin-left: 60px;
+}
+#novedades .novedades-titulo-texto {
+  font-weight: 600;
+}
+#novedades .novedades-proyectos {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  margin: 30px 60px;
+}
+#novedades .novedades-proyectos .proyectos-parrafo {
+  font-family: "Inter", serif;
+  font-weight: 600;
 }
 
-.novedades-titulo {
-    font-size: large;
-    margin-top: 40px;
-    margin-left: 60px;
-    font-family: 'Roboto slab', serif;
-}
-
-.novedades-titulo-texto {
-   font-weight: 600;
-}
-
-.novedades-proyectos {
-    margin: 30px 60px;
-    display: flex;
-    align-items: center;
-    gap: 80px;
-}
-
-.proyectos-parrafo {
-    font-family: 'Inter', serif;
-    font-weight: 600;
-}
-
-/* DONACIONES */
 #donaciones {
-    max-width: 1550px;
-    margin: 50px auto;
-    border-bottom: 1px solid black;
+  max-width: 1550px;
+  margin: 50px auto;
+  border-bottom: 1px solid black;
+}
+#donaciones .donaciones-titulo {
+  font-weight: 600;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+#donaciones .donaciones-cards {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  text-align: center;
+}
+#donaciones .donaciones-cards .cards-caja {
+  width: 315px;
+  height: 200px;
+  border: 2px solid rgb(133, 133, 133);
+}
+#donaciones .donaciones-cards .cards-caja .fondo {
+  font-family: "phudu", serif;
+  background-color: bisque;
+  font-size: 20px;
+  padding: 40px 75px 30px 75px;
+  margin-top: 0;
+}
+#donaciones .donaciones-cards .cards-caja .boton-donar {
+  background-color: orange;
+  font-family: "phudu", serif;
+  padding: 10px;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  display: block;
+  margin: 30px 70px;
+  border: 3px solid orange;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+}
+#donaciones .donaciones-cards .cards-caja .boton-donar:hover {
+  border-color: grey;
+}
+#donaciones .donaciones-info {
+  display: flex;
+}
+#donaciones .donaciones-info .info-texto {
+  margin: 50px auto;
+  font-family: "roboto slab", serif;
+}
+#donaciones .donaciones-info .info-texto .info-texto-subtitulo {
+  font-weight: 600;
+  text-align: center;
+  margin: 20px auto;
+  font-size: 20px;
+}
+#donaciones .donaciones-info .info-texto .subtitulo-dos {
+  margin: 15px auto;
+  font-weight: 600;
+  font-size: 18px;
+}
+#donaciones .donaciones-info .info-texto .datos-bancarios {
+  font-weight: 600;
+  font-size: 16px;
 }
 
-.donaciones-titulo {
-    margin-bottom: 50px;
-    text-align: center;
-    font-size: 30px;
-    font-weight: 600;
+#contacto {
+  max-width: 1550px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 40px auto;
 }
-
-.donaciones-cards {
-    display: flex; /* pone a las cajas una al lado de otra  */
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    text-align: center;
-}
-
-.cards-caja {
-    width: 315px;
-    height: 200px;
-    border: 2px solid rgb(133, 133, 133);
-}
-
-.fondo{
-    font-family: 'Phudu';
-    font-size: 20px;
-    background-color: bisque;
-    padding: 40px 75px 30px 75px;
-    margin-top: 0;
-}
-
-.boton-donar {
-    background-color: rgb(255, 140, 0);
-    padding: 10px;
-    font-family: 'Phudu';
-    font-weight: 500; color: aliceblue;
-    display: block;
-    margin: 30px 70px;
-    border-radius:5px;
-    border: 3px solid rgb(255, 140, 0);
-    transition: all 0.2s ease;
-}
-
-.boton-donar:hover {
-    border-color: grey;
-}
-
-.donaciones-info {
-    display: flex;
-}
-
-.info-texto {
-    margin: 50px auto;
-    font-family: 'roboto slab', serif ;
-}
-
-.info-texto-subtitulo {
-   text-align: center;
-   margin: 20px auto;
-   font-size: 20px;
-   font-weight: 600;
-}
-
-.subtitulo-dos {
-    margin: 15px auto;
-    font-size: 18px;
-    font-weight: 600;
-}
-
-.datos-bancarios {
-    font-size: 16px;
-    font-weight: 600;
-}
-
-
-
-/* CONTACTO */
-#contacto{
-    display: flex;
-    justify-content: space-evenly;
-    margin: 40px auto;
-    max-width: 1550px;
-    flex-wrap: wrap;
-}
-
 #contacto img {
-    width: 40px;
+  width: 40px;
 }
-
-.caja-contacto  {
-    background-color: rgb(204, 204, 204);
-    width: 400px;
-    padding: 20px;
-    border-radius: 10px;
-    border: 1px solid rgb(137, 137, 137);
+#contacto .caja-contacto {
+  background-color: rgb(204, 204, 204);
+  width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgb(137, 137, 137);
 }
-
-.contacto-titulo {
-    font-weight: 600;
+#contacto .caja-contacto .contacto-titulo {
+  font-weight: 600;
 }
-
-.labels {
-    font-family: 'Inter', serif;
-    font-weight: 500;
+#contacto .caja-contacto .imputs-estilo {
+  height: 25px;
+  border: 1px solid rgb(164, 164, 164);
+  border-radius: 5px;
 }
-
-#label-achicar {
-    font-size: 15px;
+#contacto .caja-contacto .imput-textarea {
+  border-radius: 10px;
+  width: 300px;
 }
-
-.imputs-estilo {
-    height: 25px;
-    border: 1px solid rgb(164, 164, 164);
-    border-radius: 5px;
+#contacto .caja-contacto .imput-enviar {
+  font-family: "Inter", serif;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 5px;
 }
-
-.imput-textarea {
-    border-radius: 10px;
-    width: 300px;
+#contacto .caja-contacto .imput-orange {
+  accent-color: orange;
 }
-
-.imput-enviar {
-    font-family: 'Inter';
-    font-size: 15px;
-    font-weight: 500;
-    padding: 5px;
+#contacto .caja-contacto .labels {
+  font-family: "Inter", serif;
+  font-weight: 500;
 }
-
-.imput-orange {
-    accent-color: orange;
+#contacto .caja-contacto #label-achicar {
+  font-size: 15px;
 }
-
-.segunda-caja {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+#contacto .segunda-caja {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
 }
-
-.redes-titulo-telefono {
-    font-family: 'Inter';
+#contacto .segunda-caja .redes-titulo {
+  font-weight: 600;
+  font-size: 30px;
 }
-
-.logos-redes {
-    display: flex;
-    gap: 10px;
-    list-style-type: none;
-    padding: 0;
+#contacto .segunda-caja .logos-redes {
+  display: flex;
+  gap: 10px;
+  list-style-type: none;
+  padding: 0;
 }
-
-.redes-titulo {
-    font-weight: 600;
-    font-size: 30px;
+#contacto .segunda-caja .redes-links {
+  border-bottom: 2px solid white;
+  transition: all 0.2s ease;
 }
-
-.redes-links {
-    border-bottom: 2px solid white;
-    transition: all 0.2s ease;
+#contacto .segunda-caja .redes-links:hover {
+  border-color: orange;
 }
-
-.redes-links:hover {
-    border-color: orange;
+#contacto .segunda-caja .redes-titulo-telefono {
+  font-family: "Inter", serif;
 }
-
-/* estilos del FOOTER */
-footer {
-    background-color: orange;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    border-top: 1px solid gray;
-}
-
-footer span {
-    font-family: 'Inter';
-    padding: 0;
-}
-
-footer ul {
-    list-style-type: none;
-    margin: 40px;
-    display: inline-block;
-    padding-left: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.footer-li {
-    font-family: 'Phudu';
-    border-bottom: 2px solid white;
-    transition: all 0.2s ease;
-}
-
-.footer-li:hover {
-    border-color: orange;
-}
-
-footer img {
-    width: 150px;
-}
-
 
 /* pantalla mas grande */
 /* @media only screen and (max-width: 992px){
@@ -490,152 +400,104 @@ footer img {
         background-color: rgb(232, 209, 253);
     }
 } */
-
 /* tablet */
 /* @media only screen and (max-width: 768px){
     header {
         background-color: rgb(191, 122, 255);
     }
 } */
-
 /* fono */
-@media only screen and (min-width:320px) and (max-width: 576px){
-   
-    /* HEADER */
-    header img {
-        width: 90px;
-    }
-
-    /* QUIENES SOMOS */
-    .arriba iframe {
-        padding: 0 30px;
-    }
-
-    .arriba-parrafo {
-        margin: 50px 30px 0 30px;
-    }
-
-    .quienes-somos-medio {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 30px;
-    }
-
-    .mision {
-        width: 100%;
-        border-right: none;
-
-    }
-    .vision {
-        width: 100%;
-        border-left: none;
-    }
-
-    .qs-bajo {
-        flex-wrap: wrap;
-        margin: 20px;
-    }
-
-    .valores-img {
-        width: 30%;
-    }
-
-
-    /* QUE HACEMOS */
-    #que-hacemos img {
-        width: 100%;
-    }
-
-    #que-hacemos {
-        flex-wrap: wrap;
-    }
-
-    .qh-bloque {
-        flex-wrap: wrap;
-    }
-
-    #parrafo-inferior {
-        padding: 20px;
-        padding-bottom: 5px;
-        text-align: justify;
-    }
-
-    /* NOVEDADES */
-    #novedades {
-        padding-bottom: 30px;
-    }
-
-    #novedades img, #novedades video {
-        width: 100%;
-    }
-
-    .novedades-proyectos {
-        margin: 30px auto;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .proyectos-parrafo {
-        text-align: justify;
-        padding: 20px;
-    }
-
-    /* DONACIONES */
-    .cards-caja {
-        margin-top: 20px;
-    }
-
-    .info-texto {
-        text-align: center;
-    }
-
-    /* CONTACTO */
-    .segunda-caja {
-        margin-top: 20px;
-    }
-
-    /* FOOTER */
-    footer {
+@media only screen and (min-width: 320px) and (max-width: 576px) {
+  /* HEADER */
+  header img {
+    width: 90px;
+  }
+  /* QUIENES SOMOS */
+  .arriba iframe {
+    padding: 0 30px;
+  }
+  .arriba-parrafo {
+    margin: 50px 30px 0 30px;
+  }
+  .quienes-somos-medio {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  .quienes-somos-medio .mision {
+    width: 100%;
+    border-right: none;
+  }
+  .quienes-somos-medio .vision {
+    width: 100%;
+    border-left: none;
+  }
+  .qs-bajo {
     flex-wrap: wrap;
-    }
-
-    footer img {
-        width: 110px;
-    }
-
-    footer span {
-        background-color: rgb(204, 204, 204);
-        text-align: center;
-        order: 1;
-        font-size: 13px;
-    }
-
-    footer ul {
-        display: none;
-    }
+    margin: 20px;
+  }
+  .qs-bajo .valores-img {
+    width: 30%;
+  }
+  /* QUE HACEMOS */
+  #que-hacemos {
+    flex-wrap: wrap;
+  }
+  #que-hacemos img {
+    width: 100%;
+  }
+  #que-hacemos .qh-bloque {
+    flex-wrap: wrap;
+  }
+  #parrafo-inferior {
+    padding: 20px;
+    padding-bottom: 5px;
+    text-align: justify;
+  }
+  /* NOVEDADES */
+  #novedades {
+    padding-bottom: 30px;
+  }
+  #novedades img, #novedades video {
+    width: 100%;
+  }
+  #novedades .novedades-proyectos {
+    margin: 30px auto;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  #novedades .novedades-proyectos .proyectos-parrafo {
+    text-align: justify;
+    padding: 20px;
+  }
+  /* DONACIONES */
+  .cards-caja {
+    margin-top: 20px;
+  }
+  .info-texto {
+    text-align: center;
+  }
+  /* CONTACTO */
+  .segunda-caja {
+    margin-top: 20px;
+  }
+  /* FOOTER */
+  footer {
+    flex-wrap: wrap;
+  }
+  footer img {
+    width: 110px;
+  }
+  footer span {
+    background-color: rgb(204, 204, 204);
+    text-align: center;
+    order: 1;
+    font-size: 13px;
+  }
+  footer ul {
+    display: none;
+  }
 }
 
-
-/* SUBIR 2 VECES EL PROYECTO A GIT una con los 2 nuevos html y css y luego solo dejar uno */
-
-/* agregué carpeta sass y sus partes, nuevo index y html migrado a scss */
-
-/* agregué B E M */
-
-/* ANIDÉ */
-
-/* video 7 1:25:52 */
-
-/* GENERAR CON CHATGPT TEXTO para los lorem contar palabras */
-
-/* terminar clase de animaciones IMPORTANTE la segunda mitad animaciones*/
-
-
-
-
-
-
-
-
-
+/*# sourceMappingURL=style.css.map */

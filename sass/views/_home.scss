@@ -42,10 +42,11 @@
         }
 
         .vision {
-            @extend .mision;
-            border-right: none;
+            width: 40%;
             border-left: 1px solid black;
-
+            padding: 20px;
+            padding-top: 0px;
+            text-align: center;
         }
 
         .qs-titulos {
@@ -195,14 +196,16 @@
                 font-weight: 500; color:$menu-color;
                 display: block;
                 margin: 30px 70px;
-                border: 3px solid rgb(255, 140, 0);
+                border: 3px solid $color-principal;
                 border-radius:5px;
                 transition: all 0.2s ease;
+
+                &:hover{
+                    border-color: grey; 
+                }
             }
 
-            &:hover{
-                border-color: grey; 
-            }
+            
         }
     }
 
@@ -237,7 +240,6 @@
 #contacto {
     max-width: $max-width;
     @include flex(space-evenly,null,null,wrap);
-    flex-direction: column;
     margin: 40px auto;
 
     img {
@@ -305,10 +307,10 @@
         .redes-links {
             border-bottom: 2px solid white;
             transition: all 0.2s ease;
-        }
 
-        &:hover {
-            border-color: $color-principal;
+            &:hover {
+                border-color: $color-principal;
+            }
         }
 
         .redes-titulo-telefono {
@@ -353,17 +355,20 @@
         flex-direction: column;
         margin-top: 30px;
 
-        .mision, .vision {
+        .mision { // NO SE POR QUÉ NO SE EJECUTA ???
             width: 100%;
             border-right: none;
         }
+        .vision { // NO SE POR QUÉ NO SE EJECUTA ???
+            width: 100%;
+            border-left: none;
+        }
     }
-
     .qs-bajo {
         flex-wrap: wrap;
         margin: 20px;
 
-        .valores-img {
+        .valores-img { // NO SE POR QUÉ NO SE EJECUTA ???
             width: 30%;
         }
     }
