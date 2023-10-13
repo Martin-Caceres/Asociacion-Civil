@@ -1,5 +1,7 @@
 footer {
-    background-color: $color-principal;
+    // background-color: $color-principal;
+    background: rgb(227,164,45);
+    background: radial-gradient(circle, rgba(227,164,45,1) 0%, rgba(254,168,97,1) 37%, rgba(254,131,97,1) 91%);
     @include flex( space-evenly, center, null, null);
     border-top: 1px solid gray;
 
@@ -21,10 +23,10 @@ footer {
         li {
             font-family: $font-title;
             border-bottom: 2px solid $menu-color;
-            transition: all 0.2s ease;
+            transition: all 0.1s ease;
 
             &:hover {
-                border-color: $color-principal;
+                border: none;
             }
         }
     }

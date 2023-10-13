@@ -38,12 +38,15 @@ header {
   top: 0;
   z-index: 1;
   font-family: "phudu", serif;
-  border-bottom: 2px solid rgb(181, 181, 181);
+  border-bottom: 2px solid rgb(249, 249, 249);
   background-color: rgb(255, 255, 255);
   display: flex;
   justify-content: space-evenly;
   align-items: baseline;
   flex-wrap: wrap;
+  box-shadow: 0px 7px 11px -3px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 7px 11px -3px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 7px 11px -3px rgba(0, 0, 0, 0.15);
 }
 header img {
   width: 150px;
@@ -82,7 +85,8 @@ header .navbar-nav .nav-item #boton:hover {
 }
 
 footer {
-  background-color: orange;
+  background: rgb(227, 164, 45);
+  background: radial-gradient(circle, rgb(227, 164, 45) 0%, rgb(254, 168, 97) 37%, rgb(254, 131, 97) 91%);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -106,16 +110,18 @@ footer ul {
 footer ul li {
   font-family: "phudu", serif;
   border-bottom: 2px solid rgb(255, 255, 255);
-  transition: all 0.2s ease;
+  transition: all 0.1s ease;
 }
 footer ul li:hover {
-  border-color: orange;
+  border: none;
 }
 
 #quienes-somos {
   margin: 0 auto;
-  margin-top: 50px;
+  padding-top: 50px;
   max-width: 1550px;
+  background: rgb(255, 230, 200);
+  background: linear-gradient(180deg, rgb(255, 230, 200) 0%, rgb(255, 255, 255) 56%);
 }
 #quienes-somos .arriba {
   display: flex;
@@ -144,16 +150,17 @@ footer ul li:hover {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 100px;
 }
 #quienes-somos .quienes-somos-medio .mision {
-  width: 40%;
+  width: 610px;
   border-right: 1px solid black;
   padding: 20px;
   padding-top: 0px;
   text-align: center;
 }
 #quienes-somos .quienes-somos-medio .vision {
-  width: 40%;
+  width: 610px;
   border-left: 1px solid black;
   padding: 20px;
   padding-top: 0px;
@@ -172,11 +179,31 @@ footer ul li:hover {
   display: flex;
   justify-content: space-evenly;
   text-align: center;
-  margin: 80px;
-  margin-bottom: 120px;
+  padding: 80px;
+  padding-bottom: 120px;
 }
 #quienes-somos .qs-bajo .valores-img {
   width: 200px;
+}
+#quienes-somos .qs-bajo .valores-titulo {
+  background-color: orange;
+  border-radius: 80px 0px 81px 0px;
+  -webkit-border-radius: 80px 0px 81px 0px;
+  -moz-border-radius: 80px 0px 81px 0px;
+  border: 23px none #ff6550;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  height: 170px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
+#quienes-somos .qs-bajo .valores-titulo p {
+  font-family: "merriweather", serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: rgb(68, 68, 68);
 }
 #quienes-somos .qs-bajo .valores-parrafo {
   font-family: "Inter", serif;
@@ -222,13 +249,16 @@ footer ul li:hover {
   word-spacing: 3px;
   font-size: 15px;
   border-bottom: 1px solid black;
+  background: rgb(255, 255, 255);
+  background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 25%, rgb(248, 242, 235) 68%, rgb(241, 230, 217) 100%);
 }
 
 #novedades {
   max-width: 1550px;
   margin: 0 auto;
+  padding-top: 40px;
   padding-bottom: 120px;
-  border-bottom: 1px solid black;
+  background-color: rgb(255, 241, 212);
 }
 #novedades video {
   width: 529px;
@@ -239,7 +269,6 @@ footer ul li:hover {
 #novedades .novedades-titulo {
   font-family: "roboto slab", serif;
   font-size: large;
-  margin-top: 40px;
   margin-left: 60px;
 }
 #novedades .novedades-titulo-texto {
@@ -259,7 +288,6 @@ footer ul li:hover {
 #donaciones {
   max-width: 1550px;
   margin: 50px auto;
-  border-bottom: 1px solid black;
 }
 #donaciones .donaciones-titulo {
   font-weight: 600;
@@ -277,6 +305,13 @@ footer ul li:hover {
   width: 315px;
   height: 200px;
   border: 2px solid rgb(133, 133, 133);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: all 0.3s;
+  border-radius: 10px;
+}
+#donaciones .donaciones-cards .cards-caja:hover {
+  transform: scale(1.1) translateY(-10px);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 #donaciones .donaciones-cards .cards-caja .fondo {
   font-family: "phudu", serif;
@@ -284,6 +319,9 @@ footer ul li:hover {
   font-size: 20px;
   padding: 40px 75px 30px 75px;
   margin-top: 0;
+  border-radius: 11px 10px 0px 0px;
+  -webkit-border-radius: 11px 10px 0px 0px;
+  -moz-border-radius: 11px 10px 0px 0px;
 }
 #donaciones .donaciones-cards .cards-caja .boton-donar {
   background-color: orange;
@@ -299,6 +337,7 @@ footer ul li:hover {
 }
 #donaciones .donaciones-cards .cards-caja .boton-donar:hover {
   border-color: grey;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 #donaciones .donaciones-info {
   display: flex;
@@ -328,7 +367,9 @@ footer ul li:hover {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  margin: 40px auto;
+  margin: 0 auto;
+  padding: 90px 0;
+  background-color: rgb(237, 237, 237);
 }
 #contacto img {
   width: 40px;
@@ -384,7 +425,7 @@ footer ul li:hover {
   padding: 0;
 }
 #contacto .segunda-caja .redes-links {
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid rgb(237, 237, 237);
   transition: all 0.2s ease;
 }
 #contacto .segunda-caja .redes-links:hover {
@@ -418,27 +459,21 @@ footer ul li:hover {
   }
   .arriba-parrafo {
     margin: 50px 30px 0 30px;
+    margin-bottom: 0;
   }
   .quienes-somos-medio {
     display: flex;
     align-items: center;
-    flex-direction: column;
-    margin-top: 30px;
+    flex-wrap: wrap;
+    margin: 0 auto;
   }
-  .quienes-somos-medio .mision {
-    width: 100%;
-    border-right: none;
-  }
-  .quienes-somos-medio .vision {
-    width: 100%;
-    border-left: none;
+  .quienes-somos-medio #mision, .quienes-somos-medio #vision {
+    text-align: center;
+    border: none !important;
+    padding: 10px;
   }
   .qs-bajo {
     flex-wrap: wrap;
-    margin: 20px;
-  }
-  .qs-bajo .valores-img {
-    width: 30%;
   }
   /* QUE HACEMOS */
   #que-hacemos {
@@ -454,6 +489,7 @@ footer ul li:hover {
     padding: 20px;
     padding-bottom: 5px;
     text-align: justify;
+    background: none;
   }
   /* NOVEDADES */
   #novedades {

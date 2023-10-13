@@ -7,7 +7,10 @@
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-     <!-- CSS -->
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- CSS -->
    <link rel="stylesheet" href="./style/style.css">
 
     <title>Scout de Argentina</title>
@@ -106,13 +109,13 @@
 
             <article class="quienes-somos-medio">
 
-                <div class="mision">
+                <div class="mision" id="mision">
                     <h3 class="qs-titulos">Misión</h3>
                     <p class="qs-parrafo">Contribuir a la educación de jóvenes a través de un sistema de valores basado en la Promesa y la Ley Scout, para ayudar a construir un mundo mejor donde las personas se desarrollen plenamente y jueguen un papel constructivo en la sociedad.
                     </p>
                 </div>
 
-                <div class="vision">
+                <div class="vision" id="vision">
                     <h3 class="qs-titulos">Visión</h3>
                     <p class="qs-parrafo"> Vemos una Organización Educativa comprometida con valores como la paz, los derechos humanos y el medio ambiente. Que promueve el desarrollo comunitario atraves de acciones inclusivas.
                     </p>
@@ -123,17 +126,26 @@
             <article class="qs-bajo">
                 
                 <div class="qs-valores">
-                    <img src="./img/logo-valores.png" alt="" class="valores-img">
+                    <!-- <img src="./img/logo-valores.png" alt="" class="valores-img"> -->
+                    <div class="valores-titulo" data-aos="fade-up" data-aos-duration=500">
+                        <p>Hermandad</p>
+                    </div>
                     <p class="valores-parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quisquam, nisi placeat maxime minima iure commodi dolore assumenda laborum repellat ipsa facere atque ducimus.</p>
                 </div>
 
                 <div class="qs-valores">
-                    <img src="./img/logo-valores.png" alt="" class="valores-img">
+                    <!-- <img src="./img/logo-valores.png" alt="" class="valores-img"> -->
+                    <div class="valores-titulo" data-aos="fade-up" data-aos-duration="600">
+                        <p>Lealtad</p>
+                    </div>
                     <p class="valores-parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quisquam, nisi placeat maxime minima iure commodi dolore assumenda laborum repellat ipsa facere atque ducimus.</p>
                 </div>
                 
                 <div class="qs-valores">
-                    <img src="./img/logo-valores.png" alt="" class="valores-img">
+                    <!-- <img src="./img/logo-valores.png" alt="" class="valores-img"> -->
+                    <div class="valores-titulo" data-aos="fade-up" data-aos-duration="700">
+                        <p>Compromiso</p>
+                    </div>
                     <p class="valores-parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quisquam, nisi placeat maxime minima iure commodi dolore assumenda laborum repellat ipsa facere atque ducimus.</p>
                 </div>
 
@@ -327,13 +339,16 @@
     <!-- bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
 </body>
 </html>
 
-<!-- SUBIR 2 VECES EL PROYECTO A GIT una con los 2 nuevos html y css y luego solo dejar uno -->
 
-<!-- video 7 1:25:52 -->
+<!-- PUSHEAR -->
 
 <!-- GENERAR CON CHATGPT TEXTO para los lorem contar palabras -->
-
-<!-- terminar clase de animaciones IMPORTANTE la segunda mitad animaciones -->

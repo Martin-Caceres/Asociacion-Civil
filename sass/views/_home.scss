@@ -1,8 +1,10 @@
 // QUIENES SOMOS
 #quienes-somos {
     margin: 0 auto;
-    margin-top: 50px;
+    padding-top: 50px;
     max-width: $max-width;
+    background: rgb(255,230,200);
+    background: linear-gradient(180deg, rgba(255,230,200,1) 0%, rgba(255,255,255,1) 56%);
 
     .arriba {
         @include flex(space-evenly, null, null, wrap);
@@ -32,9 +34,10 @@
 
     .quienes-somos-medio {
         @include flex(center, null, null, wrap);
+        margin-top: 100px;
 
         .mision {
-            width: 40%;
+            width: 610px;
             border-right: 1px solid black;
             padding: 20px;
             padding-top: 0px;
@@ -42,7 +45,7 @@
         }
 
         .vision {
-            width: 40%;
+            width: 610px;
             border-left: 1px solid black;
             padding: 20px;
             padding-top: 0px;
@@ -64,11 +67,34 @@
     .qs-bajo {
         @include flex(space-evenly,null, null, null);
         text-align: center;
-        margin: 80px;
-        margin-bottom: 120px;
+        padding: 80px;
+        padding-bottom: 120px;
 
         .valores-img {
             width: 200px;
+        }
+
+        .valores-titulo {
+            background-color: $color-principal;
+            border-radius: 80px 0px 81px 0px;
+            -webkit-border-radius: 80px 0px 81px 0px;
+            -moz-border-radius: 80px 0px 81px 0px;
+            border: 23px none #ff6550;
+            box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+            height: 170px;
+            width: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto;
+
+            p {
+                font-family: $font-quaternary ;
+                font-weight: $font-grosa;
+                font-size: 20px;
+                color: rgb(68, 68, 68);
+            }
+            
         }
 
         .valores-parrafo {
@@ -120,14 +146,18 @@
     word-spacing: 3px;
     font-size: 15px;
     border-bottom: 1px solid black;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(248,242,235,1) 68%, rgba(241,230,217,1) 100%);
 }
 
 //NOVEDADES
 #novedades {
     max-width: $max-width;
     margin: 0 auto;
+    padding-top: 40px;
     padding-bottom: 120px;
-    border-bottom: 1px solid black;
+    // border-bottom: 1px solid black;
+    background-color: rgb(255, 241, 212);
 
     video {
         width: 529px;
@@ -140,7 +170,6 @@
     .novedades-titulo {
         font-family: $font-tertiary;
         font-size: large;
-        margin-top: 40px;
         margin-left: 60px;
 
         &-texto {
@@ -163,7 +192,7 @@
 #donaciones {
     max-width: $max-width;
     margin: 50px auto;
-    border-bottom: 1px solid black;
+    // border-bottom: 1px solid black;
 
     .donaciones-titulo {
         font-weight: $font-grosa;
@@ -180,6 +209,14 @@
             width: 315px;
             height: 200px;
             border: 2px solid rgb(133, 133, 133);
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            transition: all .3s;
+            border-radius: 10px;
+
+            &:hover {
+                transform: scale(1.1) translateY(-10px);
+                box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            }
 
             .fondo{
                 font-family: $font-title;
@@ -187,6 +224,9 @@
                 font-size: 20px;
                 padding: 40px 75px 30px 75px;
                 margin-top: 0;
+                border-radius: 11px 10px 0px 0px;
+                -webkit-border-radius: 11px 10px 0px 0px;
+                -moz-border-radius: 11px 10px 0px 0px;
             }
 
             .boton-donar {
@@ -202,9 +242,9 @@
 
                 &:hover{
                     border-color: grey; 
+                    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
                 }
             }
-
             
         }
     }
@@ -240,7 +280,9 @@
 #contacto {
     max-width: $max-width;
     @include flex(space-evenly,null,null,wrap);
-    margin: 40px auto;
+    margin: 0 auto;
+    padding: 90px 0;
+    background-color: rgb(237, 237, 237);
 
     img {
         width: 40px;
@@ -305,7 +347,7 @@
         }
 
         .redes-links {
-            border-bottom: 2px solid white;
+            border-bottom: 2px solid rgb(237, 237, 237);
             transition: all 0.2s ease;
 
             &:hover {
@@ -348,29 +390,24 @@
 
     .arriba-parrafo {
         margin: 50px 30px 0 30px;
+        margin-bottom: 0
     }
 
     .quienes-somos-medio {
-        @include flex(null, center, null, null);
-        flex-direction: column;
-        margin-top: 30px;
+        @include flex(null, center, null, wrap);
+        margin: 0 auto;
 
-        .mision { // NO SE POR QUÉ NO SE EJECUTA ???
-            width: 100%;
-            border-right: none;
+        #mision { 
+            text-align: center;
+            border: none !important ;
+            padding: 10px;
         }
-        .vision { // NO SE POR QUÉ NO SE EJECUTA ???
-            width: 100%;
-            border-left: none;
+        #vision { 
+           @extend #mision
         }
     }
     .qs-bajo {
-        flex-wrap: wrap;
-        margin: 20px;
-
-        .valores-img { // NO SE POR QUÉ NO SE EJECUTA ???
-            width: 30%;
-        }
+        flex-wrap: wrap; 
     }
 
     
@@ -391,6 +428,7 @@
         padding: 20px;
         padding-bottom: 5px;
         text-align: justify;
+        background: none;
     }
 
     /* NOVEDADES */
