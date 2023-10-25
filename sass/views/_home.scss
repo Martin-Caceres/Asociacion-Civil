@@ -33,7 +33,7 @@
     }
 
     .quienes-somos-medio {
-        @include flex(center, null, null, wrap);
+        @include flex(center, null, null, null);
         margin-top: 100px;
 
         .mision {
@@ -65,7 +65,7 @@
     }
 
     .qs-bajo {
-        @include flex(space-evenly,null, null, null);
+        @include flex(space-evenly,null, 20px, null);
         text-align: center;
         padding: 80px;
         padding-bottom: 120px;
@@ -156,14 +156,19 @@
     margin: 0 auto;
     padding-top: 40px;
     padding-bottom: 120px;
-    // border-bottom: 1px solid black;
     background-color: rgb(255, 241, 212);
 
-    video {
-        width: 529px;
+    .novedades-proyectos {
+    @include flex(null, center, 80px, null);
+        margin: 30px 60px;
+
+        .proyectos-parrafo {
+            font-family: $font-texto;
+            font-weight: $font-grosa;
+        }
     }
 
-    img {
+    video, img {
         width: 529px;
     }
 
@@ -177,22 +182,12 @@
         }
     }
 
-    .novedades-proyectos {
-        @include flex(null, center, 80px, null);
-        margin: 30px 60px;
-
-        .proyectos-parrafo {
-            font-family: $font-texto;
-            font-weight: $font-grosa;
-        }
-    }
 }
 
 // DONACIONES
 #donaciones {
     max-width: $max-width;
     margin: 50px auto;
-    // border-bottom: 1px solid black;
 
     .donaciones-titulo {
         font-weight: $font-grosa;
@@ -361,22 +356,63 @@
     }
 }
 
-/* pantalla mas grande */
-/* @media only screen and (max-width: 992px){
-    header {
-        background-color: rgb(232, 209, 253);
-    }
-} */
+// back to top button
+.back-to-top {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    background-color: $color-principal;
+    display: inline-flex;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 20px;
+    transition: 0.5s;
+    opacity: 0.9;
 
-/* tablet */
-/* @media only screen and (max-width: 768px){
-    header {
-        background-color: rgb(191, 122, 255);
-    }
-} */
+    &:hover {
+        background-color: rgb(255, 179, 36);
+        border-radius: 10px;
+        transition: 0.5s ease;
 
-/* fono */
-@media only screen and (min-width:320px) and (max-width: 576px){
+        span {
+            transform: scale(1.50);
+            transition: 0.5s;
+        }
+    }
+
+    span {
+        color: $menu-color;
+        font-size: 30px;
+        transition: 0.5s;
+    }
+}
+
+/* large screen */ 
+@media only screen and (min-width:992px) and (max-width: 1260px){
+    /* QUIENES SOMOS */
+    .arriba-parrafo {
+        margin-top: 40px;
+    }
+
+    /* QUE HACEMOS */
+    #que-hacemos {
+        flex-wrap: wrap;
+
+        img {
+            width: 100%;
+        }
+
+        .qh-bloque {
+            flex-wrap: wrap;
+        }
+    }
+
+    /* NOVEDADES */
+}
+
+
+/* Mobile */ 
+@media only screen and (min-width:320px) and (max-width: 991px){
    
     /* HEADER */
     header img {
@@ -397,14 +433,12 @@
         @include flex(null, center, null, wrap);
         margin: 0 auto;
 
-        #mision { 
+        #mision, #vision { 
             text-align: center;
             border: none !important ;
             padding: 10px;
         }
-        #vision { 
-           @extend #mision
-        }
+
     }
     .qs-bajo {
         flex-wrap: wrap; 
@@ -479,6 +513,7 @@
             text-align: center;
             order: 1;
             font-size: 13px;
+            width: 100%;
         }
 
         ul {

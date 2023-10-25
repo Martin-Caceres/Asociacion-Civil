@@ -34,11 +34,7 @@ img {
 }
 
 header {
-  position: sticky;
-  top: 0;
-  z-index: 1;
   font-family: "phudu", serif;
-  border-bottom: 2px solid rgb(249, 249, 249);
   background-color: rgb(255, 255, 255);
   display: flex;
   justify-content: space-evenly;
@@ -149,7 +145,6 @@ footer ul li:hover {
 #quienes-somos .quienes-somos-medio {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   margin-top: 100px;
 }
 #quienes-somos .quienes-somos-medio .mision {
@@ -178,6 +173,7 @@ footer ul li:hover {
 #quienes-somos .qs-bajo {
   display: flex;
   justify-content: space-evenly;
+  gap: 20px;
   text-align: center;
   padding: 80px;
   padding-bottom: 120px;
@@ -260,20 +256,6 @@ footer ul li:hover {
   padding-bottom: 120px;
   background-color: rgb(255, 241, 212);
 }
-#novedades video {
-  width: 529px;
-}
-#novedades img {
-  width: 529px;
-}
-#novedades .novedades-titulo {
-  font-family: "roboto slab", serif;
-  font-size: large;
-  margin-left: 60px;
-}
-#novedades .novedades-titulo-texto {
-  font-weight: 600;
-}
 #novedades .novedades-proyectos {
   display: flex;
   align-items: center;
@@ -282,6 +264,17 @@ footer ul li:hover {
 }
 #novedades .novedades-proyectos .proyectos-parrafo {
   font-family: "Inter", serif;
+  font-weight: 600;
+}
+#novedades video, #novedades img {
+  width: 529px;
+}
+#novedades .novedades-titulo {
+  font-family: "roboto slab", serif;
+  font-size: large;
+  margin-left: 60px;
+}
+#novedades .novedades-titulo-texto {
   font-weight: 600;
 }
 
@@ -435,20 +428,53 @@ footer ul li:hover {
   font-family: "Inter", serif;
 }
 
-/* pantalla mas grande */
-/* @media only screen and (max-width: 992px){
-    header {
-        background-color: rgb(232, 209, 253);
-    }
-} */
-/* tablet */
-/* @media only screen and (max-width: 768px){
-    header {
-        background-color: rgb(191, 122, 255);
-    }
-} */
-/* fono */
-@media only screen and (min-width: 320px) and (max-width: 576px) {
+.back-to-top {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  background-color: orange;
+  display: inline-flex;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 20px;
+  transition: 0.5s;
+  opacity: 0.9;
+}
+.back-to-top:hover {
+  background-color: rgb(255, 179, 36);
+  border-radius: 10px;
+  transition: 0.5s ease;
+}
+.back-to-top:hover span {
+  transform: scale(1.5);
+  transition: 0.5s;
+}
+.back-to-top span {
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  transition: 0.5s;
+}
+
+/* large screen */
+@media only screen and (min-width: 992px) and (max-width: 1260px) {
+  /* QUIENES SOMOS */
+  .arriba-parrafo {
+    margin-top: 40px;
+  }
+  /* QUE HACEMOS */
+  #que-hacemos {
+    flex-wrap: wrap;
+  }
+  #que-hacemos img {
+    width: 100%;
+  }
+  #que-hacemos .qh-bloque {
+    flex-wrap: wrap;
+  }
+  /* NOVEDADES */
+}
+/* Mobile */
+@media only screen and (min-width: 320px) and (max-width: 991px) {
   /* HEADER */
   header img {
     width: 90px;
@@ -530,6 +556,7 @@ footer ul li:hover {
     text-align: center;
     order: 1;
     font-size: 13px;
+    width: 100%;
   }
   footer ul {
     display: none;
